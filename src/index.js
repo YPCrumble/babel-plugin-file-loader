@@ -22,7 +22,9 @@ const applyTransform = (p, t, state, value, calleeName) => {
 
   if (options.extensions && options.extensions.indexOf(ext.slice(1)) >= 0) {
     try {
-      const rootPath = state.file.opts.sourceRoot || process.cwd()
+      // const rootPath = state.file.opts.sourceRoot || process.cwd()
+      const rootPath = process.cwd() + options.context
+
       console.log('sourceRoot is')
       console.log(state.file.opts.sourceRoot)
       console.log('rootPath is')
