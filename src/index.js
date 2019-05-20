@@ -23,6 +23,14 @@ const applyTransform = (p, t, state, value, calleeName) => {
   if (options.extensions && options.extensions.indexOf(ext.slice(1)) >= 0) {
     try {
       const rootPath = state.file.opts.sourceRoot || process.cwd()
+      console.log('sourceRoot is')
+      console.log(state.file.opts.sourceRoot)
+      console.log('rootPath is')
+      console.log(rootPath)
+      console.log('process.cwd is')
+      console.log(process.cwd())
+      console.log('NODE_PATH is')
+      console.log(process.env.NODE_PATH)
       const scriptDirectory = dirname(resolve(state.file.opts.filename))
       const filePath = resolve(scriptDirectory, value)
 
