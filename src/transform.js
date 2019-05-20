@@ -74,6 +74,8 @@ export default (rootPath, filePath, opts) => {
   let context = opts.context[0] == '/' ? opts.context.substr(1) : opts.context
   let limit = opts.limit
   let contextPath = path.resolve(rootPath, context)
+  console.log('contextPath is')
+  console.log(contextPath)
 
   if (!fs.existsSync(filePath)) {
     throw new Error('File does not exist')
